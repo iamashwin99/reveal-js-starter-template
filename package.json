@@ -1,9 +1,9 @@
 {
-  "name": "reveal.js",
+  "name": "reveal.js starter",
   "version": "5.1.0",
   "description": "The HTML Presentation Framework",
   "homepage": "https://revealjs.com",
-  "subdomain": "revealjs",
+  "subdomain": "revealjs starter",
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
   "license": "MIT",
@@ -13,9 +13,8 @@
     "build": "gulp build"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "https://hakim.se"
+    "name": "Ashwin Kumar Karnad",
+    "web": "https://ashwinschronicles.github.io/"
   },
   "repository": {
     "type": "git",
