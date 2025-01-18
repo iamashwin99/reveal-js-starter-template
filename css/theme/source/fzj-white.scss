@@ -1,0 +1,192 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Added elementes from the manim theme by Benjamin Hackl by Ashwin Kumar Karnad
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url("https://apps.fz-juelich.de/fdm/fonts/css.php?family=weissenhof");
+@import url("fonts/academicons/css/academicons.min.css");
+@import url("fonts/awesome/css/all.min.css");
+
+// Colors from Corporate Design of Forschungszentrum Jülich
+$fzjJuelichBlue1: #023d6b;
+$fzjJuelichBlue2: #adbde3;
+$fzjLightGrey: #ebebeb;
+$fzjYellow: #faeb5a;
+$fzjRed: #eb5f73;
+$fzjGreen: #b9d25f;
+$fzjPurple: #af82b9;
+$fzjOrange: #fab45a;
+$memberText: "Member of the Helmholtz Association";
+$slideNumText: "page";
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #222;
+$mainFont: 'Weissenhof', Arial, sans-serif;
+$mainFontSize: 22pt;
+
+$headingColor: $fzjJuelichBlue1;
+$headingFont: 'Weissenhof', Arial, sans-serif;
+$headingTextShadow: none;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$heading1Size: 32pt;
+$heading2Size: 32pt;
+$heading3Size: 16pt;
+$heading4Size: 16pt;
+$footerSize: 12pt;
+
+$bottom: 4%;
+
+$backgroundColor: #fff;
+$linkColor: $fzjJuelichBlue1;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $fzjJuelichBlue2;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Logo in background
+.reveal-viewport {
+  background-image: url('img/fzj-logo.svg');
+  background-repeat: no-repeat;
+  background-position: 97% 95%;
+  background-size: 16%;
+}
+// HGF member in background
+.reveal .backgrounds::before {
+  content: $memberText;
+  color: $fzjJuelichBlue1;
+  font-size: $footerSize;
+  position: absolute;
+  bottom: $bottom;
+  left: 13%;
+}
+
+// Make controls appear left, not right.
+.reveal .controls {
+  left: 107px;
+  right: auto;
+  bottom: $bottom;
+}
+
+// Make progress bar a bit thicker (default 3px)
+.reveal .progress {
+  height: 6px;
+}
+
+// Style slide number
+.reveal .slide-number {
+  left: 50%;
+  right: auto;
+  bottom: $bottom;
+  padding: 0;
+
+  font-family: $headingFont;
+  font-size: $footerSize;
+  color: $fzjJuelichBlue1;
+  background-color: $backgroundColor;
+
+  &::before {
+    content: $slideNumText;
+  }
+}
+
+// Style blockquotes
+.reveal blockquote {
+  background: $fzjLightGrey;
+  color: $fzjJuelichBlue1;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+// Title slide special layout and colors
+.slides > section:first-child {
+  text-align: left;
+  color: $backgroundColor;
+  margin-top: 5vh;
+
+  p { margin: 0; }
+  img { max-width: 100%; margin: 0; }
+  h1 { color: inherit; margin: 0; }
+  h2 { color: $fzjJuelichBlue2; margin: 0; }
+  .date-name {
+    font-size: $heading4Size;
+    text-transform: uppercase;
+    margin-top: 7vh;
+  }
+}
+.backgrounds > .slide-background:first-child .slide-background-content {
+  background-image: linear-gradient($fzjJuelichBlue1, $fzjJuelichBlue1);
+  background-size: auto 75vh;
+  background-position: 0 5vh;
+}
+
+
+.reveal .slides {
+  // Make h3, h4, h5, h6 non-uppercase
+  h3,h4,h5,h6 {
+    text-transform: none;
+  }
+
+  // Make h3, h4, h5, h6 or a fragment following lists have margin-top
+  ol, ul {
+    + {
+       h3,h4,h5,h6,div.fragment {
+         margin-top: var(--r-block-margin);
+       }
+    }
+  }
+
+  // Make images have no margins
+  img {
+    margin: 0;
+  }
+
+  // Make a grid layout available (num of rows by class select)
+  grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &.col-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.col-3b {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    &.col-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &.col-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    // make any direct children have some space around them
+    > * {
+      padding: 0.3em;
+
+      // any children can have borders for visual separation
+      &.bt { border-top: 3px dotted $fzjJuelichBlue1; }
+      &.br { border-right: 3px dotted $fzjJuelichBlue1; }
+      &.bb { border-bottom: 3px dotted $fzjJuelichBlue1; }
+      &.bl { border-left: 3px dotted $fzjJuelichBlue1; }
+
+      // any child with a class may have vertically centered content
+      &.item-center { display: grid; align-content: center; }
+    }
+  }
+}
