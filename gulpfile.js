@@ -123,6 +123,17 @@ gulp.task('js-es6', () => {
 })
 gulp.task('js', gulp.parallel('js-es5', 'js-es6'));
 
+// Images task
+gulp.task('images', () => {
+    if (!fs.existsSync('./img')) {
+        fs.mkdirSync('./img', { recursive: true });
+    }
+
+    // Copy all images to dist/img (for general use)
+    return gulp.src(['./img/**/*'])
+        .pipe(gulp.dest('./dist/img'));
+});
+
 // Creates a UMD and ES module bundle for each of our
 // built-in plugins
 gulp.task('plugins', () => {
@@ -271,9 +282,10 @@ gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
 
 gulp.task('test', gulp.series( 'eslint', 'qunit' ))
 
-gulp.task('default', gulp.series(gulp.parallel('js', 'css', 'plugins'), 'test'))
+gulp.task('build', gulp.parallel('js', 'css', 'plugins', 'images'))
 
-gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
+gulp.task('default', gulp.series('build', 'test'))
+
 
 gulp.task('package', gulp.series(async () => {
 
@@ -325,6 +337,8 @@ gulp.task('serve', () => {
         'css/*.scss',
         'css/print/*.{sass,scss,css}'
     ], gulp.series('css-core', 'reload'))
+
+    gulp.watch('./img/**/*', gulp.series('images', 'reload'))
 
     gulp.watch(['test/*.html'], gulp.series('test'))
 
