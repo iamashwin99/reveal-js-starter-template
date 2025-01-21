@@ -282,7 +282,26 @@ gulp.task('eslint', () => gulp.src(['./js/**', 'gulpfile.js'])
 
 gulp.task('test', gulp.series( 'eslint', 'qunit' ))
 
-gulp.task('build', gulp.parallel('js', 'css', 'plugins', 'images'))
+// Font tasks
+const academicons = () => {
+    return gulp.src(['./node_modules/academicons/{css,fonts}/**'])
+        .pipe(gulp.dest('./dist/fonts/academicons'));
+}
+
+const fontawesome = gulp.series(
+    () => {
+        return gulp.src('./node_modules/@fortawesome/fontawesome-free/css/all.min.css')
+            .pipe(gulp.dest('./dist/fonts/awesome/css'));
+    },
+    () => {
+        return gulp.src(['./node_modules/@fortawesome/fontawesome-free/webfonts/**'])
+            .pipe(gulp.dest('./dist/fonts/awesome/webfonts'));
+    }
+);
+
+const fonts = gulp.parallel(academicons, fontawesome);
+
+gulp.task('build', gulp.parallel('js', 'css', 'css-themes', 'plugins', 'images', fonts))
 
 gulp.task('default', gulp.series('build', 'test'))
 

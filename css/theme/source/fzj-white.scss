@@ -15,8 +15,8 @@
 
 // Include theme-specific fonts
 @import url("https://apps.fz-juelich.de/fdm/fonts/css.php?family=weissenhof");
-@import url("fonts/academicons/css/academicons.min.css");
-@import url("fonts/awesome/css/all.min.css");
+@import url("../fonts/academicons/css/academicons.min.css");
+@import url("../fonts/awesome/css/all.min.css");
 
 // Colors from Corporate Design of Forschungszentrum Jülich
 $fzjJuelichBlue1: #023d6b;
@@ -46,7 +46,7 @@ $heading3Size: 16pt;
 $heading4Size: 16pt;
 $footerSize: 12pt;
 
-$bottom: 4%;
+$bottom: 2%;
 
 $backgroundColor: #fff;
 $linkColor: $fzjJuelichBlue1;
