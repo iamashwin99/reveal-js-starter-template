@@ -374,14 +374,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: #023d6b;
   font-size: 12pt;
   position: absolute;
-  bottom: 2%;
+  bottom: 4%;
   left: 13%;
 }
 
 .reveal .controls {
   left: 107px;
   right: auto;
-  bottom: 2%;
+  bottom: 4%;
 }
 
 .reveal .progress {
@@ -391,7 +391,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal .slide-number {
   left: 50%;
   right: auto;
-  bottom: 2%;
+  bottom: 4%;
   padding: 0;
   font-family: "Weissenhof", Arial, sans-serif;
   font-size: 12pt;
