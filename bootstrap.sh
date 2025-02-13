@@ -18,7 +18,7 @@ main() {
   git clone "https://github.com/iamashwin99/reveal-js-starter-template.git" "$name" &> /dev/null
   cd "$name" && \
     rm -rf .git .github && \
-    rm README.md img/.gitkeep bootstrap.sh
+    rm README.md bootstrap.sh
 
   msg "Installing dependencies..."
   npm install &> /dev/null
