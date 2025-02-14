@@ -15,7 +15,7 @@ main() {
   [[ -z name ]] && die "The presentation name must not be empty"
 
   msg "Cloning Reveal.js Starter..."
-  git clone "https://github.com/iamashwin99/reveal-js-starter-template.git" "$name" &> /dev/null
+  git clone --recurse-submodules "https://github.com/iamashwin99/reveal-js-starter-template.git" "$name" &> /dev/null
   cd "$name" && \
     rm -rf .git .github && \
     rm README.md bootstrap.sh
