@@ -9,6 +9,7 @@
 
 
 // Default mixins and settings -----------------
+@use "sass:color";
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
@@ -189,4 +190,22 @@ $selectionBackgroundColor: $fzjJuelichBlue2;
       &.item-center { display: grid; align-content: center; }
     }
   }
+}
+
+.reveal ul, .reveal ul ul {
+    list-style-type: none;
+}
+
+.reveal ul > li::before {
+    content: "";
+    border-color: transparent $fzjJuelichBlue1;
+    border-style: solid;
+    border-width: 0.25em 0 0.25em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+    margin-right: 0.5em;
 }
