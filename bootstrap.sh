@@ -23,6 +23,9 @@ main() {
   msg "Installing dependencies..."
   npm install &> /dev/null
 
+  msg "Building dist"
+  npm run build
+
   echo ""
   success "Presentation sucessfully set up in '$name'! 🚀"
   cat <<-EOF
