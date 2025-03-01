@@ -209,3 +209,17 @@ $selectionBackgroundColor: $fzjJuelichBlue2;
     position: relative;
     margin-right: 0.5em;
 }
+
+// Set Font Awesome icons color to Jülich Blue
+.fa-solid, .fas,
+.fa-regular, .far,
+.fa-brands, .fab {
+  color: $fzjJuelichBlue1;
+}
+
+// Set Academic Icons color to Jülich Blue
+.ai-solid, .ai,
+.ai-regular, .far,
+.ai, .fab {
+  color: $fzjJuelichBlue1;
+}

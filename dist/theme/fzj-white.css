@@ -485,3 +485,33 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: grid;
   align-content: center;
 }
+
+.reveal ul, .reveal ul ul {
+  list-style-type: none;
+}
+
+.reveal ul > li::before {
+  content: "";
+  border-color: transparent #023d6b;
+  border-style: solid;
+  border-width: 0.25em 0 0.25em 0.45em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+  margin-right: 0.5em;
+}
+
+.fa-solid, .fas,
+.fa-regular, .far,
+.fa-brands, .fab {
+  color: #023d6b;
+}
+
+.ai-solid, .ai,
+.ai-regular, .far,
+.ai, .fab {
+  color: #023d6b;
+}
