@@ -1,6 +1,7 @@
 # Reveal.js Starter
 A simple starter template for creating presentations with [Reveal.js](https://revealjs.com/).
 Comes with default settings (all builtin plugins) and a simple manim like slide theme from Benjamin Hackl, https://benjamin-hackl.at
+Also has a FZJ corporate design theme from Oliver Bertuch.
 Adds a CI to automatically publish the slides to GitHub Pages.
 
 ## Usage
