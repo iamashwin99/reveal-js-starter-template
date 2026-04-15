@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@import url(./fonts/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css2?family=League+Gothic&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff;
@@ -43,12 +43,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal-viewport {
   background: rgb(247, 242, 211);
-  background: -moz-radial-gradient(center, circle cover, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(255, 255, 255)), color-stop(100%, rgb(247, 242, 211)));
-  background: -webkit-radial-gradient(center, circle cover, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
-  background: -o-radial-gradient(center, circle cover, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
-  background: -ms-radial-gradient(center, circle cover, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
-  background: radial-gradient(center, circle cover, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
+  background: radial-gradient(circle farthest-corner at center, rgb(255, 255, 255) 0%, rgb(247, 242, 211) 100%);
   background-color: var(--r-background-color);
 }
 

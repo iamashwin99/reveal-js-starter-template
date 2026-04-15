@@ -50,7 +50,7 @@ $bottom: 4%;
 
 $backgroundColor: #fff;
 $linkColor: $fzjJuelichBlue1;
-$linkColorHover: lighten( $linkColor, 20% );
+$linkColorHover: color.scale($linkColor, $lightness: 25%);
 $selectionBackgroundColor: $fzjJuelichBlue2;
 
 // Change text colors against dark slide backgrounds
