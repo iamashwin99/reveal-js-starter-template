@@ -6,6 +6,8 @@ workflow:
 
 pages:
   stage: deploy
+  tags:
+    - docker
   script:
     - npm install
     - npm run build
