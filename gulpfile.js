@@ -1,5 +1,4 @@
 const fs = require('fs');
-const yargs = require('yargs')
 const through = require('through2');
 
 const sass = require('sass')
@@ -7,11 +6,12 @@ const sass = require('sass')
 const gulp = require('gulp')
 const zip = require('gulp-zip')
 const connect = require('gulp-connect')
-const autoprefixer = require('gulp-autoprefixer')
+const autoprefixer = require('gulp-autoprefixer').default
 
-const root = yargs.argv.root || '.'
-const port = yargs.argv.port || 8000
-const host = yargs.argv.host || 'localhost'
+const argv = require('yargs/yargs')(process.argv.slice(2)).argv
+const root = argv.root || '.'
+const port = argv.port || 8000
+const host = argv.host || 'localhost'
 
 // a custom pipeable step to transform Sass to CSS
 function compileSass() {

@@ -1,14 +1,10 @@
 {
-  "name": "reveal.js starter",
-  "version": "5.1.0",
-  "description": "The HTML Presentation Framework",
-  "homepage": "https://revealjs.com",
-  "subdomain": "revealjs starter",
-  "main": "dist/reveal.js",
-  "module": "dist/reveal.esm.js",
+  "name": "reveal-js-starter-template",
+  "version": "1.0.0",
+  "description": "A starter template for reveal.js presentations",
+  "homepage": "https://github.com/iamashwin99/reveal-js-starter-template",
   "license": "MIT",
   "scripts": {
-    "test": "gulp test",
     "start": "gulp serve",
     "build": "gulp build"
   },
@@ -26,16 +22,17 @@
   "keywords": [
     "reveal",
     "slides",
-    "presentation"
+    "presentation",
+    "template"
   ],
   "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^8.0.0",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^10.0.0",
     "gulp-connect": "^5.7.0",
-    "gulp-zip": "^5.1.0",
-    "sass": "^1.79.4",
+    "gulp-zip": "^6.1.0",
+    "sass": "^1.99.0",
     "through2": "^4.0.2",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "overrides": {
     "gulp-connect": {
@@ -43,45 +40,7 @@
     }
   },
   "browserslist": "> 2%, not dead",
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es6": true
-    },
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-      "sourceType": "module",
-      "allowImportExportEverywhere": true,
-      "requireConfigFile": false
-    },
-    "globals": {
-      "module": false,
-      "console": false,
-      "unescape": false,
-      "define": false,
-      "exports": false
-    },
-    "rules": {
-      "curly": 0,
-      "eqeqeq": 2,
-      "wrap-iife": [
-        2,
-        "any"
-      ],
-      "no-use-before-define": [
-        2,
-        {
-          "functions": false
-        }
-      ],
-      "new-cap": 2,
-      "no-caller": 2,
-      "dot-notation": 0,
-      "no-eq-null": 2,
-      "no-unused-expressions": 0
-    }
-  },
   "dependencies": {
-    "academicons": "^1.9.2"
+    "academicons": "^1.9.5"
   }
 }

@@ -18,6 +18,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Deprecated SASS fixed**: replaced `lighten()` with `color.scale()` in `fzj.scss` and `fzj-white.scss`; added missing `@use "sass:color"` to `fzj.scss`
 - **Outdated gradient syntax fixed**: replaced vendor-prefixed `radial-gradient cover` syntax in `css/theme/template/mixins.scss` with modern `farthest-corner` equivalent
 - **Fixed invalid `referrerpolicy`**: changed `no-anonymous` → `no-referrer` on Font Awesome CDN link in `index.html`
+- **package.json cleaned up**: renamed from `reveal.js starter` to `reveal-js-starter-template`, version reset to `1.0.0`, removed reveal.js-specific fields (`main`, `module`, `subdomain`), removed stale `eslintConfig` block
+- **Dependencies updated to latest**: `gulp@5.0.1`, `gulp-autoprefixer@10.0.0`, `gulp-zip@6.1.0`, `sass@1.99.0`, `yargs@18.0.0`, `academicons@1.9.5`
+- **gulpfile.js**: fixed `yargs` v18 breaking change (use `require('yargs/yargs')(process.argv.slice(2)).argv`); fixed `gulp-autoprefixer` v10 ESM breaking change (use `.default`)
 
 ### Removed
 - Devdependencies no longer needed: `@babel/core`, `@babel/eslint-parser`, `@babel/preset-env`, `@fortawesome/fontawesome-free`, `@rollup/plugin-babel`, `@rollup/plugin-commonjs`, `@rollup/plugin-node-resolve`, `@rollup/plugin-terser`, `babel-plugin-transform-html-import-to-string`, `colors`, `core-js`, `fitty`, `glob`, `gulp-eslint`, `gulp-header-comment`, `gulp-clean-css`, `highlight.js`, `marked`, `node-qunit-puppeteer`, `qunit`, `rollup`
