@@ -15,9 +15,8 @@
 // ---------------------------------------------
 
 // Include theme-specific fonts
+// Note: Font Awesome and Academicons are loaded via CDN in index.html
 @import url("https://apps.fz-juelich.de/fdm/fonts/css.php?family=weissenhof");
-@import url("../fonts/academicons/css/academicons.min.css");
-@import url("../fonts/awesome/css/all.min.css");
 
 // Colors from Corporate Design of Forschungszentrum Jülich
 $fzjJuelichBlue1: #023d6b;
