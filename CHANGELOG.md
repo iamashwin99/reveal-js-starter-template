@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- `.gitlab-ci.yml`: GitLab CI pipeline that builds the project and deploys to GitLab Pages on push to the default branch
+
 ### Changed
 - **CDN migration**: reveal.js core (`reset.css`, `reveal.css`, `reveal.js`), all standard plugins (markdown, highlight, math, notes, search, zoom), and reveal.js-menu now loaded from jsDelivr CDN (`reveal.js@5.1.0`, `reveal.js-menu@2.1.0`) instead of vendored local files
 - **Build system simplified**: gulpfile now only compiles custom SCSS themes and copies images — no more JS bundling, plugin bundling, or reveal.js core compilation
