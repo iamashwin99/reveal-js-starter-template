@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Changed
+- **Upgraded reveal.js to 6.0.1**: bumped all CDN references from `reveal.js@5.1.0` to `reveal.js@6.0.1`; updated plugin script paths from `plugin/<name>/plugin.js` to `dist/plugin/<name>.js` to match the new package layout
+
 ## [1.0.0] - 2026-04-15
 
 ### Added
