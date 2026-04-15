@@ -6,7 +6,6 @@ const sass = require('sass')
 
 const gulp = require('gulp')
 const zip = require('gulp-zip')
-const minify = require('gulp-clean-css')
 const connect = require('gulp-connect')
 const autoprefixer = require('gulp-autoprefixer')
 
@@ -40,7 +39,6 @@ function compileSass() {
 gulp.task('css-themes', () => gulp.src(['./css/theme/source/*.{sass,scss}'])
         .pipe(compileSass())
         .pipe(autoprefixer())
-        .pipe(minify({compatibility: 'ie9'}))
         .pipe(gulp.dest('./dist/theme')))
 
 // Copy images to dist/img/
